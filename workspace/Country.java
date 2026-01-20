@@ -12,7 +12,7 @@ public class Country
     language = "";
     image = "";
   }
-  public Country(string c, string cr, string l, string i) {
+  public Country(String c,String cr, String l, String i) {
     country = c;
     capital = cr;
     language = l;
