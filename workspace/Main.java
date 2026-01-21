@@ -88,18 +88,26 @@ public class Main
   /* reviewButton should get the country at index from the countryArray, call its toString() method and save the result, print it out with System.out.println and as an argument to outputLabel.setText( text to print out ); */
   public void reviewButtonClick()
   {
-     
+     String temp = countryArray[index].toString();
+     outputLabel.setText(temp);
   }
 
   /* quizButton should clear the outputLabel (outputLabel.setText to empty string), get the country at index from countryArray, print out a question about it like What country is this? and/or What's this country's capital?. Get the user's answer using scan.nextLine() and check if it is equal to the country's data using its get methods and print out correct or incorrect.
   */
   public void quizButtonClick()
   {
-    String userAnswer = userInput.getText();
-    Scanner scan = new Scanner(System.in); 
+    String userAnswer = userInput.getText(); 
+    outputLabel.setText("");
+    if(countryArray[index].getCountry().equals(userAnswer)) {
+      outputLabel.setText("correct");
+      System.out.println("correct");
+    } 
+    else {
+      outputLabel.setText("false");
+      System.out.println("false");
+    }
     
     
-    scan.close();
   }
 
 
